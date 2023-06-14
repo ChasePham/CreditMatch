@@ -22,6 +22,8 @@ func (c Chase) freedomUnlimited() float64 {
 	return c.other_purchases * .05 + c.drug_stores * .03
 }
 
+
+//FIXME: There is some math error in here I believe
 func (c Chase) sapphirePreferred() float64 {
 	var total float64 = -95.0
 	var temp_travel float64 = c.travel_portal_purchases
@@ -35,8 +37,19 @@ func (c Chase) sapphirePreferred() float64 {
 	var total_spent float64 = temp_travel + c.other_travel_purchases + c.restaurants + c.streaming_services + c.online_groceries
 	total_points += total_spent * 10
 
-	
 
+
+	var additional_value float64 = temp_travel / .0125
+
+	if additional_value > total_points {
+		additional_value -= total_points
+		total_points = 0
+		temp_travel -= additional_value * .0125
+	} else {
+		total_points -= additional_value
+		temp_travel = 0
+	}
+	
 
 
 	
