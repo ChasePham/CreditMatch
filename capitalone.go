@@ -10,3 +10,9 @@ type capital struct {
 	hotels_and_car_rentals float64
 	flights float64
 }
+
+
+func (c capital) savor() float64 {
+	return c.dining * .03 + c.entertainment * .03 + c.streaming_services * .03 + c.groceries * .03
+}
+
