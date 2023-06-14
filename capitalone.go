@@ -16,3 +16,6 @@ func (c capital) savor() float64 {
 	return c.dining * .03 + c.entertainment * .03 + c.streaming_services * .03 + c.groceries * .03
 }
 
+func (c capital) venturex() float64 {
+	
+}
