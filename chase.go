@@ -85,6 +85,7 @@ func (c Chase) sapphireReserved() float64 {
 	return total_points * .01 - math.Max(0,temp_travel) - 550
 }
 
+
 func (c Chase) total() float64 {
 	var flex float64 = freedomflex()
 	var unlimited float64 = freedomUnlimited()
