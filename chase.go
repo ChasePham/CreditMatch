@@ -84,3 +84,13 @@ func (c Chase) sapphireReserved() float64 {
 	// Travel portal is already discounted within this method
 	return total_points * .01 - math.Max(0,temp_travel) - 550
 }
+
+func (c Chase) total() float64 {
+	var flex float64 = freedomflex()
+	var unlimited float64 = freedomUnlimited()
+	var preferred float64 = sapphirePreffered()
+	var reserved float64 = sapphireReserved()
+	var result float64 = 0
+	result += flex + unlimited + math.Max(preferred,reserved)
+	return result
+}
