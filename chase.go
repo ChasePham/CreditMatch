@@ -13,19 +13,21 @@ type Chase struct {
 
 }
 
-func (Chase) freedomflex() float64 { 
+func (c Chase) freedomflex() float64 { 
+	return c.flex_cat * .05
+}
+
+
+func (c Chase) freedomUnlimited() float64 {
+	return other_travel_purchases * .05 + drug_stores * .03
+}
+
+func (c Chase) sapphirePreferred() float64 {
+	var total float64 = -95.0
+	total += 50
 	
 }
 
-
-func (Chase) freedomUnlimited() float64 {
-
-}
-
-func (Chase) sapphirePreferred() float64 {
-
-}
-
-func (Chase) sapphireReserved() float64 {
+func (c Chase) sapphireReserved() float64 {
 
 }
