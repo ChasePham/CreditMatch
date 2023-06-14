@@ -1,1 +1,1 @@
-print("test")
+package main
