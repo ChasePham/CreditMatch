@@ -18,3 +18,7 @@ func (a amex) blueCash() float64 {
 func (a amex) goldCard() float64 {
 	return a.restaurants * 4 * .007 + a.supermarkets * 4 * .007 - 250
 }
+
+func (a amex) platinum() float64 {
+	
+}
