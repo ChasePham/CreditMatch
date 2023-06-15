@@ -11,3 +11,6 @@ type amex struct {
 	digital_entertainment float64
 }
 
+func (a amex) blueCash() float64 {
+	
+}
