@@ -27,3 +27,7 @@ func (c citi) premier() float64 {
 	var remaining_portal_purchases float64 = math.Max(0,c.travel_portal_purchases - 100)
 	return remaining_portal_purchases * 10 * .01 + c.other_travel_purchases * 3 * .01
 }
+
+func (c citi) total() float64 {
+	return doubleCash() + customCash() + premier()
+}
