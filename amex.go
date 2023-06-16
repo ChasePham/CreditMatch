@@ -26,5 +26,8 @@ func (a amex) platinum() float64 {
 }
 
 func (a amex) total() float64 {
-
+	var uber_cash float64 = 320.0
+	var AET_credit float64 = 240.0
+	var remain_ubers float64 = math.Max(0,a.ubers - uber_cash)
+	var remain_AET float64 = math.Max(0, a.digital_entertainment - AET_credit)
 }
