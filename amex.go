@@ -1,5 +1,5 @@
 package amex
-
+import ("math")
 type amex struct {
 	supermarkets float64
 	online_retail float64
@@ -20,9 +20,11 @@ func (a amex) goldCard() float64 {
 }
 
 func (a amex) platinum() float64 {
-	
+	var remain_hotels float64 = math.Max(0, a.hotels - 200)
+	var remain_flights float64 = math.Max(0,a.flights_portal - 200)
+	return remain_hotels * 5 * .007 + remain_flights * 5 * .007
 }
 
 func (a amex) total() float64 {
-	
+
 }
