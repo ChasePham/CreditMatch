@@ -22,7 +22,7 @@ func (a amex) goldCard() float64 {
 func (a amex) platinum() float64 {
 	var remain_hotels float64 = math.Max(0, a.hotels - 200)
 	var remain_flights float64 = math.Max(0,a.flights_portal - 200)
-	return remain_hotels * 5 * .007 + remain_flights * 5 * .007
+	return remain_hotels * 5 * .007 + remain_flights * 5 * .007 - 695
 }
 
 func (a amex) total() float64 {
@@ -30,4 +30,5 @@ func (a amex) total() float64 {
 	var AET_credit float64 = 240.0
 	var remain_ubers float64 = math.Max(0,a.ubers - uber_cash)
 	var remain_AET float64 = math.Max(0, a.digital_entertainment - AET_credit)
+	return blueCash() + goldCard() + platinum() - remain_ubers - remain_AET
 }
