@@ -22,3 +22,7 @@ func (a amex) goldCard() float64 {
 func (a amex) platinum() float64 {
 	
 }
+
+func (a amex) total() float64 {
+	
+}
