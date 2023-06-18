@@ -3,7 +3,6 @@ package citi
 import "math"
 
 
-
 type citi struct {
 	other_purchases float64
 	custom_categories float64
