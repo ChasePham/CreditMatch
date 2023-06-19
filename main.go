@@ -5,6 +5,7 @@ import ("fmt"
 "CreditMatch/packages/amex"
 "CreditMatch/packages/chase"
 "CreditMatch/packages/capital_one"
+"CreditMatch/packages/citi"
 )
 
 
@@ -111,4 +112,10 @@ func main() {
         Flights: air_travel_portal + air_other,
     }
 
+    citi_trifecta := citi.Citi {
+        Other_purchases : other_purchases,
+        Custom_categories : citi_spending_cat,
+        Travel_portal_purchases : hotels_and_rentals_portal,
+        Other_travel_purchases : hotels_and_rentals_other + air_other,
+    }
 }
