@@ -1,6 +1,10 @@
 package main
 
-import ("fmt")
+
+import ("fmt"
+"CreditMatch/packages/amex"
+)
+
 
 func main() {
     fmt.Println("Welcome to Credit Match! \nInput your statement information to figure out which credit card bundle works for you!")
@@ -72,6 +76,16 @@ func main() {
     var other_purchases float64
     fmt.Scanln(&other_purchases)
 
-
+    amex_trifecta := amex.Amex {
+        Supermarkets: online_groceries + online_groceries,
+        Online_retail: retail,
+        Gas_stations: gas,
+        Restaurants: restaurants,
+        Flights_portal: air_travel_portal,
+        Hotels: hotels_and_rentals_other + hotels_and_rentals_portal,
+        Ubers: ubers,
+        Digital_entertainment: streaming_services,
+    }
+    fmt.Scanln(amex_trifecta)
 
 }

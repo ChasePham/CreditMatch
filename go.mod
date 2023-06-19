@@ -1,3 +1,3 @@
-module CreditMatch
+module CreditMatch/packages
 
 go 1.20
