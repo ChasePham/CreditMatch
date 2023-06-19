@@ -4,6 +4,7 @@ package main
 import ("fmt"
 "CreditMatch/packages/amex"
 "CreditMatch/packages/chase"
+"CreditMatch/packages/capital_one"
 )
 
 
@@ -99,6 +100,15 @@ func main() {
         Streaming_services : streaming_services,
         Other_purchases : other_purchases,
         Hotels_and_car_rentals : hotels_and_rentals_other + hotels_and_rentals_portal,
+    }
+
+    capital_one_duo := capital_one.Capital {
+        Dining: restaurants,
+        Entertainment: entertainment,
+        Streaming_services: streaming_services,
+        Groceries: online_groceries + groceries,
+        Hotels_and_car_rentals: hotels_and_rentals_other + hotels_and_rentals_portal,
+        Flights: air_travel_portal + air_other,
     }
 
 }
