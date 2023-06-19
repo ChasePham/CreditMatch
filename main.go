@@ -6,6 +6,7 @@ import ("fmt"
 "CreditMatch/packages/chase"
 "CreditMatch/packages/capital_one"
 "CreditMatch/packages/citi"
+"math"
 )
 
 
@@ -133,4 +134,17 @@ func main() {
 
 
     fmt.Print("\n")
+
+
+    max := math.Max(math.Max(math.Max(chase_total, amex_total), capital_one_total), citi_total)
+
+    if max == chase_total {
+        fmt.Println("You matched with the Chase Trifecta!")
+    } else if max == amex_total {
+        fmt.Println("You matched with the American Express Trifecta!")
+    } else if max == capital_one_total {
+        fmt.Println("You matched with the Capital One Duo")
+    } else {
+        fmt.Println("You matched with the Citi Trifecta")
+    }
 }
