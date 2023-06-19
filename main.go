@@ -120,4 +120,8 @@ func main() {
     }
 
     chase_total := chase_trifecta.Total()
+    amex_total := amex_trifecta.Total()
+    capital_one_total := capital_one_duo.Total()
+    citi_total := citi_trifecta.Total()
+
 }

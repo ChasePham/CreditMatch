@@ -20,6 +20,6 @@ func (c Capital) venturex() float64 {
 	return c.Hotels_and_car_rentals * 10 * .01 + c.Flights * 5 * .01 + c.Other_purchases * 2 * .01 + (300 + 100 - 395)
 }
 
-func (c Capital) total() float64 {
+func (c Capital) Total() float64 {
 	return c.savor() + c.venturex()
 }

@@ -26,6 +26,6 @@ func (c Citi) premier() float64 {
 	return remaining_portal_purchases * 10 * .01 + c.Other_travel_purchases * 3 * .01
 }
 
-func (c Citi) total() float64 {
+func (c Citi) Total() float64 {
 	return c.doubleCash() + c.customCash() + c.premier()
 }
