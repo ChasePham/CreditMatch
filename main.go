@@ -118,4 +118,6 @@ func main() {
         Travel_portal_purchases : hotels_and_rentals_portal,
         Other_travel_purchases : hotels_and_rentals_other + air_other,
     }
+
+    chase_total := chase_trifecta.Total()
 }

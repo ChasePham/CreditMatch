@@ -86,7 +86,7 @@ func (c Chase) sapphireReserved() float64 {
 }
 
 
-func (c Chase) total() float64 {
+func (c Chase) Total() float64 {
 	var flex float64 = c.freedomflex()
 	var unlimited float64 = c.freedomUnlimited()
 	var preferred float64 = c.sapphirePreferred()
