@@ -3,6 +3,7 @@ package main
 
 import ("fmt"
 "CreditMatch/packages/amex"
+"CreditMatch/packages/chase"
 )
 
 
@@ -76,6 +77,7 @@ func main() {
     var other_purchases float64
     fmt.Scanln(&other_purchases)
 
+    // FIXME: Forgot other purchases
     amex_trifecta := amex.Amex {
         Supermarkets: online_groceries + online_groceries,
         Online_retail: retail,
@@ -86,6 +88,17 @@ func main() {
         Ubers: ubers,
         Digital_entertainment: streaming_services,
     }
-    fmt.Scanln(amex_trifecta)
+
+    chase_trifecta := chase.Chase {
+        Flex_cat : chase_seasonal_cat,
+        Travel_portal_purchases :hotels_and_rentals_portal + air_travel_portal,
+        Other_travel_purchases : hotels_and_rentals_other + air_other,
+        Drug_stores : drugstores,
+        Restaurants :restaurants,
+        Online_groceries : online_groceries,
+        Streaming_services : streaming_services,
+        Other_purchases : other_purchases,
+        Hotels_and_car_rentals : hotels_and_rentals_other + hotels_and_rentals_portal,
+    }
 
 }
