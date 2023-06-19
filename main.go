@@ -124,4 +124,13 @@ func main() {
     capital_one_total := capital_one_duo.Total()
     citi_total := citi_trifecta.Total()
 
+    fmt.Print("\n")
+
+    fmt.Println("A credit Trifecta with Chase will save you:",chase_total)
+    fmt.Println("A credit Trifecta with American Express will save you:",amex_total)
+    fmt.Println("A credit Duo with Capital One will save you:",capital_one_total)
+    fmt.Println("A credit Trifecta with Citi will save you:",citi_total)
+
+
+    fmt.Print("\n")
 }
